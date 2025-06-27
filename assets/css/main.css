@@ -1,0 +1,226 @@
+/*
+ * main.css - Style commun pour toutes les pages du site Carnet de Plongée
+ * Palette marine, typographie moderne, layout site web classique
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root {
+    --marine-blue: #0a2540;
+    --marine-blue-light: #1e3a5c;
+    --marine-turquoise: #14b8a6;
+    --marine-sand: #f1f5f9;
+    --marine-white: #ffffff;
+    --marine-gradient: linear-gradient(135deg, #0a2540 0%, #14b8a6 100%);
+    --marine-orange: #f97316;
+    --marine-purple: #8b5cf6;
+    --marine-focus: #14b8a6;
+    --marine-radius: 0.75rem;
+    --marine-shadow: 0 4px 24px 0 rgba(20,184,166,0.08);
+    --marine-transition: 0.2s cubic-bezier(.4,0,.2,1);
+    --container-width: 1100px;
+}
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--marine-gradient);
+    color: var(--marine-blue);
+    margin: 0;
+    min-height: 100vh;
+}
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+/* Header / Navigation */
+.site-header {
+    background: var(--marine-blue);
+    color: var(--marine-white);
+    box-shadow: 0 2px 8px 0 rgba(10,37,64,0.08);
+    padding: 0.5rem 0;
+}
+.nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--marine-turquoise);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+.nav-link {
+    color: var(--marine-white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--marine-radius);
+    transition: background var(--marine-transition), color var(--marine-transition);
+}
+.nav-link.active, .nav-link:hover {
+    background: var(--marine-turquoise);
+    color: var(--marine-blue);
+}
+/* Hero Section */
+.hero-section {
+    background: var(--marine-sand);
+    padding: 3rem 0 2rem 0;
+}
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.hero-text {
+    flex: 1;
+}
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: var(--marine-blue);
+    margin-bottom: 1rem;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--marine-blue-light);
+    margin-bottom: 2rem;
+}
+.btn-primary {
+    background: var(--marine-turquoise);
+    color: var(--marine-white);
+    border: none;
+    border-radius: var(--marine-radius);
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--marine-shadow);
+    transition: background var(--marine-transition), color var(--marine-transition);
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-primary:hover {
+    background: #0e9488;
+    color: #fff;
+}
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.hero-img img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+}
+/* Stats Section */
+.stats-section {
+    background: var(--marine-blue-light);
+    color: var(--marine-white);
+    padding: 2.5rem 0;
+}
+.stats-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.stat-block {
+    background: var(--marine-blue);
+    border-radius: var(--marine-radius);
+    box-shadow: var(--marine-shadow);
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    min-width: 180px;
+    flex: 1;
+}
+.stat-block i {
+    font-size: 2.2rem;
+}
+.stat-label {
+    font-size: 1rem;
+    color: var(--marine-turquoise);
+    font-weight: 600;
+}
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--marine-white);
+}
+/* Footer */
+.site-footer {
+    background: var(--marine-blue);
+    color: var(--marine-white);
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+.footer-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.footer-logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--marine-turquoise);
+    margin-right: 1rem;
+}
+.footer-version {
+    font-size: 0.95rem;
+    color: var(--marine-white);
+    opacity: 0.7;
+}
+.footer-links a {
+    color: var(--marine-white);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: color var(--marine-transition);
+}
+.footer-links a:hover {
+    color: var(--marine-turquoise);
+    opacity: 1;
+}
+/* Utilitaires */
+.text-blue { color: #3b82f6; }
+.text-emerald { color: #10b981; }
+.text-cyan { color: #06b6d4; }
+.text-teal { color: #14b8a6; }
+.text-orange { color: var(--marine-orange); }
+.text-purple { color: var(--marine-purple); }
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-flex, .stats-flex, .footer-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .main-nav {
+        gap: 1rem;
+    }
+    .stat-block {
+        min-width: 140px;
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 0 0.7rem;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .stat-block {
+        padding: 1.2rem 0.7rem;
+    }
+}

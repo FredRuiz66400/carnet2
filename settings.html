@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réglages - Carnet de Plongée</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo"><i class="fas fa-water"></i> Carnet de Plongée</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="dives.html" class="nav-link">Plongées</a>
+                <a href="add-dive.html" class="nav-link">Ajouter</a>
+                <a href="stats.html" class="nav-link">Statistiques</a>
+                <a href="settings.html" class="nav-link active">Réglages</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container" style="padding:2.5rem 0;max-width:600px;">
+            <h1>Réglages</h1>
+            <form style="margin-top:2rem;display:flex;flex-direction:column;gap:1.2rem;">
+                <div>
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" id="username" value="Plongeur">
+                </div>
+                <div>
+                    <label for="certification">Niveau de certification</label>
+                    <select id="certification">
+                        <option value="Débutant">Débutant</option>
+                        <option value="Open Water" selected>Open Water</option>
+                        <option value="Advanced Open Water">Advanced Open Water</option>
+                        <option value="Rescue Diver">Rescue Diver</option>
+                        <option value="Divemaster">Divemaster</option>
+                        <option value="Instructeur">Instructeur</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="units">Unités de mesure</label>
+                    <select id="units">
+                        <option value="metric" selected>Métrique</option>
+                        <option value="imperial">Impérial</option>
+                    </select>
+                </div>
+                <div style="margin:2rem 0 1rem 0;">
+                    <button class="btn-primary" type="button"><i class="fas fa-download"></i> Exporter mes données</button>
+                    <label class="btn-primary" style="margin-left:1rem;cursor:pointer;">
+                        <i class="fas fa-upload"></i> Importer
+                        <input type="file" id="import-file" accept=".json" style="display:none;">
+                    </label>
+                </div>
+            </form>
+            <div style="margin-top:2rem;color:#aaa;font-size:0.95rem;">
+                Carnet de Plongée v1.0 — Application pour passionnés de plongée sous-marine
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <div>
+                <span class="footer-logo"><i class="fas fa-water"></i> Carnet de Plongée</span>
+                <span class="footer-version">v1.0</span>
+            </div>
+            <div class="footer-links">
+                <a href="settings.html">Réglages</a>
+                <a href="#">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet de Plongée Numérique</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo"><i class="fas fa-water"></i> Carnet de Plongée</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="dives.html" class="nav-link">Plongées</a>
+                <a href="add-dive.html" class="nav-link">Ajouter</a>
+                <a href="stats.html" class="nav-link">Statistiques</a>
+                <a href="settings.html" class="nav-link">Réglages</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <h1>Explorez les profondeurs</h1>
+                <p>Votre carnet de plongée numérique, simple, sécurisé et toujours accessible.</p>
+                <a href="add-dive.html" class="btn-primary">Ajouter une plongée</a>
+            </div>
+            <div class="hero-img">
+                <img src="assets/img/hero-diver.svg" alt="Illustration plongeur" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container stats-flex">
+            <div class="stat-block">
+                <i class="fas fa-water text-blue"></i>
+                <div>
+                    <span class="stat-label">Total Plongées</span>
+                    <span class="stat-value" id="total-dives">0</span>
+                </div>
+            </div>
+            <div class="stat-block">
+                <i class="fas fa-clock text-emerald"></i>
+                <div>
+                    <span class="stat-label">Temps Total</span>
+                    <span class="stat-value" id="total-time">0min</span>
+                </div>
+            </div>
+            <div class="stat-block">
+                <i class="fas fa-arrow-down text-cyan"></i>
+                <div>
+                    <span class="stat-label">Prof. Max</span>
+                    <span class="stat-value" id="max-depth">0m</span>
+                </div>
+            </div>
+            <div class="stat-block">
+                <i class="fas fa-chart-line text-teal"></i>
+                <div>
+                    <span class="stat-label">Prof. Moy.</span>
+                    <span class="stat-value" id="avg-depth">0m</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <div>
+                <span class="footer-logo"><i class="fas fa-water"></i> Carnet de Plongée</span>
+                <span class="footer-version">v1.0</span>
+            </div>
+            <div class="footer-links">
+                <a href="settings.html">Réglages</a>
+                <a href="#">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

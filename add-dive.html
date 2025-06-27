@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une Plongée - Carnet de Plongée</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo"><i class="fas fa-water"></i> Carnet de Plongée</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="dives.html" class="nav-link">Plongées</a>
+                <a href="add-dive.html" class="nav-link active">Ajouter</a>
+                <a href="stats.html" class="nav-link">Statistiques</a>
+                <a href="settings.html" class="nav-link">Réglages</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container" style="padding:2.5rem 0;max-width:600px;">
+            <h1>Nouvelle Plongée</h1>
+            <form class="dive-form" style="margin-top:2rem;display:flex;flex-direction:column;gap:1.2rem;">
+                <div style="display:flex;gap:1rem;">
+                    <div style="flex:1;">
+                        <label for="dive-date">Date</label>
+                        <input type="date" id="dive-date" required>
+                    </div>
+                    <div style="flex:1;">
+                        <label for="dive-time">Heure</label>
+                        <input type="time" id="dive-time" value="09:00">
+                    </div>
+                </div>
+                <div>
+                    <label for="dive-location">Lieu</label>
+                    <input type="text" id="dive-location" placeholder="Ex: Marseille, France" required>
+                </div>
+                <div>
+                    <label for="dive-site">Site de Plongée</label>
+                    <input type="text" id="dive-site" placeholder="Ex: Épave du Donator" required>
+                </div>
+                <div style="display:flex;gap:1rem;">
+                    <div style="flex:1;">
+                        <label for="max-depth">Prof. Max (m)</label>
+                        <input type="number" id="max-depth" placeholder="25" required>
+                    </div>
+                    <div style="flex:1;">
+                        <label for="duration">Durée (min)</label>
+                        <input type="number" id="duration" placeholder="45" required>
+                    </div>
+                </div>
+                <div style="display:flex;gap:1rem;">
+                    <div style="flex:1;">
+                        <label for="water-temp">Temp. Eau (°C)</label>
+                        <input type="number" id="water-temp" placeholder="22">
+                    </div>
+                    <div style="flex:1;">
+                        <label for="visibility">Visibilité (m)</label>
+                        <input type="number" id="visibility" placeholder="15">
+                    </div>
+                </div>
+                <div>
+                    <label for="conditions">Conditions</label>
+                    <select id="conditions">
+                        <option value="Excellentes">Excellentes</option>
+                        <option value="Bonnes" selected>Bonnes</option>
+                        <option value="Moyennes">Moyennes</option>
+                        <option value="Difficiles">Difficiles</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="buddy-name">Binôme</label>
+                    <input type="text" id="buddy-name" placeholder="Nom du binôme">
+                </div>
+                <div style="display:flex;gap:1rem;">
+                    <div style="flex:1;">
+                        <label for="air-start">Air Début (bar)</label>
+                        <input type="number" id="air-start" placeholder="200">
+                    </div>
+                    <div style="flex:1;">
+                        <label for="air-end">Air Fin (bar)</label>
+                        <input type="number" id="air-end" placeholder="50">
+                    </div>
+                </div>
+                <div>
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" placeholder="Observations, faune observée, conditions particulières..." rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Enregistrer la Plongée</button>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <div>
+                <span class="footer-logo"><i class="fas fa-water"></i> Carnet de Plongée</span>
+                <span class="footer-version">v1.0</span>
+            </div>
+            <div class="footer-links">
+                <a href="settings.html">Réglages</a>
+                <a href="#">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

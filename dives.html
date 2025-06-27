@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Plongées - Carnet de Plongée</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo"><i class="fas fa-water"></i> Carnet de Plongée</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="dives.html" class="nav-link active">Plongées</a>
+                <a href="add-dive.html" class="nav-link">Ajouter</a>
+                <a href="stats.html" class="nav-link">Statistiques</a>
+                <a href="settings.html" class="nav-link">Réglages</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container" style="padding:2.5rem 0;">
+            <h1>Mes Plongées</h1>
+            <div style="margin:1.5rem 0;display:flex;gap:1rem;align-items:center;">
+                <input type="text" placeholder="Rechercher par site, lieu ou notes..." style="flex:1;padding:0.7rem 1rem;border-radius:0.7rem;border:1px solid #e0e6ed;">
+                <a href="add-dive.html" class="btn-primary"><i class="fas fa-plus"></i> Ajouter</a>
+            </div>
+            <div class="dives-list">
+                <table style="width:100%;border-collapse:collapse;background:#fff;border-radius:0.7rem;overflow:hidden;">
+                    <thead style="background:#f1f5f9;color:#0a2540;">
+                        <tr>
+                            <th style="padding:0.8rem;">Date</th>
+                            <th>Lieu</th>
+                            <th>Site</th>
+                            <th>Profondeur</th>
+                            <th>Durée</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="text-align:center;">
+                            <td colspan="6" style="padding:2rem;color:#aaa;">Aucune plongée enregistrée</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <div>
+                <span class="footer-logo"><i class="fas fa-water"></i> Carnet de Plongée</span>
+                <span class="footer-version">v1.0</span>
+            </div>
+            <div class="footer-links">
+                <a href="settings.html">Réglages</a>
+                <a href="#">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
