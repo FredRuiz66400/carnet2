@@ -1,0 +1,124 @@
+/* Mobile : jusqu'à 600px */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .container {
+    padding: 0 1rem !important;
+  }
+
+  .site-header, .site-footer {
+    padding: 1rem 0;
+  }
+
+  .nav-flex, .footer-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+
+  .burger {
+    display: flex !important;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    z-index: 1000;
+  }
+
+  .main-nav.closed {
+    display: none;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    text-align: left;
+    border-radius: 0.5rem;
+  }
+
+  .stats-flex {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+
+  .stat-block {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .stat-label, .stat-value {
+    font-size: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+
+  ul {
+    font-size: 1rem;
+  }
+}
+
+/* Tablette : 601px à 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 17px;
+  }
+
+  .burger {
+    display: none !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .container {
+    padding: 0 2rem !important;
+  }
+
+  .stats-flex {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .stat-block {
+    min-width: 45%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Desktop : au cas où tu veux ajuster au-delà de 1024px */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
